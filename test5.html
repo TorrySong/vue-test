@@ -20,14 +20,47 @@
 </head>
 <body>
 	<div id="app5">
-		{{#if ok}}
-			<h2>yes</h2>
-		{{/if}}
+		{{a}} <br>
 		{{ok}}
-		<input v-model="ok">
+		<h1 v-if="ok">yes</h1>
+		<h1 v-else>No</h1>
+		Type:<input v-model="type">
+		<template v-if="ok">
+			<h1>Title</h1>
+			<p>P 1</p>
+			<p>P2</p>
+		</template>
+		<div v-if="type=='A'">
+			<h1>AA</h1>
+		</div>
+		<div v-else-if="type=='B'">
+			<h1>BB</h1>
+		</div>
+		<div v-else="type=='C'">
+			<h1>CC</h1>
+		</div>
+		<template v-if="type=='A'" >
+			<label>Username:</label>
+			<input placeholder="Enter your username" key="username-input">
+		</template>
+		<template v-else>
+			<label>Email:</label>
+			<input placeholder="Enter your Email" key="email-input">
+		</template>
+		<!-- <button v-bind:onclick>切换</button> -->
+		
+		<select>
+			<option v-for="item in list">{{item.name}}</option>
+		</select>
+		数组迭代：
+		<ul>
+			<li v-for="(item,index) of list">{{index}} -{{item.name}}</li>
+		</ul>
+		对象迭代：
+		<ul>
+			<li v-for="(value,key,index) in obj">{{value}}-{{key}}-{{index}}</li>
+		</ul>
 	</div>
-	<div></div>
-	<h1>aaa</h1>
 	<script src="./js/test2.js"></script>
 </body>
 </html>
