@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue class和style</title>
+	<script src="./js/vue.min.js"></script>
+	<style>
+		.active{
+			background-color: red;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+		}
+		.text{
+			border:solid 1px blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="app4">
+		<input v-model="classObject">
+		<div v-bind:class="[textKey,{active:activeKey}]"></div>
+		<my-component v-bind:class="{active:activeKey}"></my-component>
+		<div v-bind:style="{color:colorVal}"></div>
+	</div>
+
+	
+	<script src="./js/test1.js"></script>
+</body>
+</html>

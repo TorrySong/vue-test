@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>条件渲染</title>
+	<script src="./js/vue.min.js"></script>
+	<style>
+		.active{
+			background-color: red;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+		.text{
+			border:solid 1px blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="app5">
+		{{#if ok}}
+			<h2>yes</h2>
+		{{/if}}
+		{{ok}}
+		<input v-model="ok">
+	</div>
+	<div></div>
+	<h1>aaa</h1>
+	<script src="./js/test2.js"></script>
+</body>
+</html>

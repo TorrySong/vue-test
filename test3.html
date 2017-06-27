@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue测试3</title>
+	<script src="./js/vue.min.js"></script>
+</head>
+<body>
+	<div id="app3">
+		{{message}} <br>
+		<input v-model="message">
+		{{reverseMessage}} <br>
+		{{reverseMessage2()}} <br>
+		{{now}}
+		{{now2()}}
+		<br>
+		{{firstName}}  <input v-model='firstName'><br>
+		{{lastName}}  <input v-model='lastName'><br>
+		{{fullName}} <br>
+		computed:{{fullName}}
+	</div>
+	<script src="./js/test1.js"></script>
+</body>
+</html>
